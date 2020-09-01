@@ -1,0 +1,10 @@
+---
+galaxy_info:
+  role_name: mssql17
+  author: Ashwin Krishnamurthi
+  description: Role to install Microsoft SQL Server 2017 on Windows Server 2016
+  Company: 
+
+  galaxy_tags: []
+
+  dependencies: []

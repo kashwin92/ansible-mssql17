@@ -1,0 +1,17 @@
+---
+# handlers file for roles/mssql
+- name: reboot windows
+  win_reboot:
+    reboot_timeout: 3600
+    post_reboot_delay: 60
+  when: windows_reboot_allowed
+
+- name: restart sqlserver service
+  win_service:
+    name: "SQL Server ({{ mssql_instance_name|upper }})"
+    state: restarted
+
+- name: restart sqlagent service
+  win_service:
+    name: "SQLAgent${{ mssql_instance_name|upper }}"
+    state: restarted

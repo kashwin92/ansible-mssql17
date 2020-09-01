@@ -1,0 +1,24 @@
+---
+#[windows]
+#EC2AMAZ-OQ586D7
+
+#[windows:vars]
+#ansible_host=54.160.99.45
+#ansible_user=Administrator
+#ansible_password=DWut7=U9JLK7A)LLOW$I;j%nCb?o*q%p
+#ansible_connection=winrm
+#ansible_port=5986
+#ansible_winrm_server_cert_validation=ignore
+
+all:
+  hosts:
+    <Windows host name>
+  vars:
+    vault_url: http://100.26.162.173:8200
+    vault_token: s.wYUWWXlAPbYk5NJRIYqR411s
+    ansible_host: <Windows Public IP>
+    ansible_user: Administrator
+    ansible_password: "{{ lookup('hashi_vault', 'secret=windata/win2016/mssql17/host_pass:value token={{ vault_token }} url={{ vault_url }}') }}"
+    ansible_connection: winrm
+    ansible_port: 5986
+    ansible_winrm_server_cert_validation: ignore
