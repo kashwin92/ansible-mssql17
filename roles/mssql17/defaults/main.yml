@@ -1,7 +1,7 @@
 ---
 # Hashicorp Vault Config
 vault_url: http://100.26.162.173:8200
-vault_token: s.wYUWWXlAPbYk5NJRIYqR411s
+vault_token: 
 
 # Active Directory Domain Services
 dns_domain_name: CONTOSO.internal
