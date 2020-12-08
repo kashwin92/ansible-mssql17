@@ -15,7 +15,7 @@ all:
     <Windows host name>
   vars:
     vault_url: http://100.26.162.173:8200
-    vault_token: s.wYUWWXlAPbYk5NJRIYqR411s
+    vault_token: 
     ansible_host: <Windows Public IP>
     ansible_user: Administrator
     ansible_password: "{{ lookup('hashi_vault', 'secret=windata/win2016/mssql17/host_pass:value token={{ vault_token }} url={{ vault_url }}') }}"
