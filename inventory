@@ -3,9 +3,9 @@
 #EC2AMAZ-OQ586D7
 
 #[windows:vars]
-#ansible_host=54.160.99.45
+#ansible_host=
 #ansible_user=Administrator
-#ansible_password=DWut7=U9JLK7A)LLOW$I;j%nCb?o*q%p
+#ansible_password=
 #ansible_connection=winrm
 #ansible_port=5986
 #ansible_winrm_server_cert_validation=ignore
